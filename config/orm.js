@@ -3,6 +3,7 @@ Here is the O.R.M. where you write functions that takes inputs and conditions an
 */
 
 var connection = require('../config/connection.js');
+var mysql = require("mysql");
 
 var orm = {
     chooseBurger: function(burger, cb) {

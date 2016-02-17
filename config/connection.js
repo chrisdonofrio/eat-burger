@@ -9,7 +9,6 @@ connection = mysql.createConnection({
   host: "localhost",
   port: 8011,
   user: "root",
-  password: '',
   database: "burgers_db"
 });
 

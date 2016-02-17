@@ -6,6 +6,12 @@ var orm = require('../config/orm.js');
 
 var burgers = {
 
+  show: function (cb) {
+    orm.showBurgers('tableName', function (res) {
+      cb(res);
+    });
+  },
+
   add: function (burger, cb) {
     orm.chooseBurger(burger, function (res){
       cb(res);
@@ -16,12 +22,6 @@ var burgers = {
     orm.devourBurger(burgerId, function (res){
       cb(res);
     })
-  },
-
-  show: function (cb) {
-    orm.showBurgers('tableName', function (res) {
-      cb(res);
-    });
   }
 };
 
